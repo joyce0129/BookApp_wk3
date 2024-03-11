@@ -1,0 +1,29 @@
+[{
+    "title": "Popular Books",
+    "data": [
+       {
+       "title": "Fashionopolis",
+       "artist": "Dana Thomas",
+       "url": "",
+       "image": "",
+       "thumbnail_image": ""
+       },
+
+       {
+        "title": "Chanel",
+        "artist": "Patrick Mauriès",
+        "url": "",
+        "image": "",
+        "thumbnail_image": ""
+        },
+
+        {
+            "title": "Calligraphy",
+            "artist": "June & Lucy",
+            "url": "",
+            "image": "",
+            "thumbnail_image": ""
+        }
+
+       
+ ]}]
