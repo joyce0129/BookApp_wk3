@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, Pressable,Linking} from "react-native";
-// import Star from "./Star";
+import Star from "./Star";
+
 
 const HotBookDetail=({book, navigation})=>{
   return (
@@ -17,10 +18,12 @@ const HotBookDetail=({book, navigation})=>{
                   uri: book.image
                 }}
               />
+              {book.starSection? <Star star={book.star} style={styles.star}/>:null}
               </Pressable>
             </View>
           </View>  
           <View style={styles.headerContainerStyle}>
+            
             <Text style={styles.headerTitleStyle}>{book.title}</Text>
             <Text style={styles.headerContentStyle}>{book.artist}</Text>
           </View>   
@@ -32,9 +35,6 @@ const HotBookDetail=({book, navigation})=>{
 
 const styles = StyleSheet.create({
   cardContainerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     elevation: 1,
     marginLeft: 5,
     marginRight: 5,
-    marginTop:10,
+    marginTop:20,
     
   },
   headerContainerStyle: {
@@ -52,8 +52,9 @@ const styles = StyleSheet.create({
     width: 130,
   },
   headerTitleStyle: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
+    marginTop:3
   },
   headerContentStyle: {
     fontSize: 11,
